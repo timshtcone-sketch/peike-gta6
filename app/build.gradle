@@ -1,0 +1,25 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'nl.peike.gta6'
+    compileSdk 34
+    defaultConfig {
+        applicationId "nl.peike.gta6"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        vast {
+            storeFile file('peike.keystore')
+            storePassword 'peikegta6'
+            keyAlias 'peike'
+            keyPassword 'peikegta6'
+        }
+    }
+    buildTypes {
+        debug { signingConfig signingConfigs.vast }
+        release { minifyEnabled false; signingConfig signingConfigs.vast }
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}

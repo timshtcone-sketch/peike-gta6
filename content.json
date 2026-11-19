@@ -1,0 +1,335 @@
+{
+ "bijgewerkt": "2026-11-19T18:45",
+ "tips": [
+  {
+   "id": "rijden-1",
+   "cat": "Rijden",
+   "status": "check",
+   "titel": "Rem af vóór de bocht, niet erin",
+   "tekst": "Gas los en remmen vlak vóór de bocht, daarna weer gas. Wie in de bocht pas remt, glijdt eruit.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "rijden-2",
+   "cat": "Rijden",
+   "status": "check",
+   "titel": "Handrem voor scherpe bochten",
+   "tekst": "Een korte tik op de handrem laat de auto draaien. Te lang = spin. Oefen eerst op een leeg parkeerterrein.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "rijden-3",
+   "cat": "Rijden",
+   "status": "check",
+   "titel": "Elke auto rijdt anders",
+   "tekst": "Sportwagens zijn snel maar nerveus, terreinwagens traag maar sterk. Neem buiten de stad iets stevigs.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "rijden-4",
+   "cat": "Rijden",
+   "status": "check",
+   "titel": "Route op de minikaart",
+   "tekst": "Zet een markering op de kaart, dan krijg je een lijn op je minikaart.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "politie-1",
+   "cat": "Politie",
+   "status": "check",
+   "titel": "Uit het zicht = sneller kwijt",
+   "tekst": "Blijf buiten het zicht van agenten: steegjes, tunnels, onder bruggen of een garage in.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "politie-2",
+   "cat": "Politie",
+   "status": "check",
+   "titel": "Let op de minikaart",
+   "tekst": "Daar zie je waar agenten zoeken. Rij er omheen in plaats van erdoorheen.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "politie-3",
+   "cat": "Politie",
+   "status": "check",
+   "titel": "Van auto wisselen helpt",
+   "tekst": "Agenten zoeken vaak de auto waarin je gezien werd. Ver uit het zicht wisselen kan helpen.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "geld-1",
+   "cat": "Geld",
+   "status": "check",
+   "titel": "Missies eerst, winkelen later",
+   "tekst": "Verhaalmissies leveren vaak het meeste op en zetten nieuwe dingen open.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "geld-2",
+   "cat": "Geld",
+   "status": "check",
+   "titel": "Repareren is goedkoper dan nieuw",
+   "tekst": "Is je favoriete auto beschadigd? Zoek een werkplaats.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "missies-1",
+   "cat": "Missies",
+   "status": "zeker",
+   "titel": "Twee hoofdpersonen",
+   "tekst": "Je speelt met Lucia en Jason. Let op wie er bij een missie hoort.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "missies-2",
+   "cat": "Missies",
+   "status": "check",
+   "titel": "Mislukt? Gewoon opnieuw",
+   "tekst": "Bij de meeste missies kun je vanaf een checkpoint opnieuw. Probeer een andere aanpak.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "missies-3",
+   "cat": "Missies",
+   "status": "check",
+   "titel": "Lees de opdracht onderin",
+   "tekst": "Daar staat precies wat je moet doen, bv. \"volg de auto, niet te dichtbij\".",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "verkennen-1",
+   "cat": "Verkennen",
+   "status": "zeker",
+   "titel": "Leonida is meer dan Vice City",
+   "tekst": "Ook de Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia en Mount Kalaga.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "verkennen-2",
+   "cat": "Verkennen",
+   "status": "check",
+   "titel": "Pas op in het moeras",
+   "tekst": "In moerassen kunnen wilde dieren zitten. Blijf in je boot of auto als je het niet vertrouwt.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "verkennen-3",
+   "cat": "Verkennen",
+   "status": "check",
+   "titel": "Boten zijn superhandig",
+   "tekst": "Rond Vice City en de Keys ben je met een boot soms sneller dan over de weg.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "verkennen-4",
+   "cat": "Verkennen",
+   "status": "check",
+   "titel": "Verken 's avonds én overdag",
+   "tekst": "Steden zien er 's nachts heel anders uit en er gebeuren dan soms andere dingen.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "telefoon-1",
+   "cat": "Telefoon",
+   "status": "check",
+   "titel": "Je telefoon is je beste vriend",
+   "tekst": "Berichten, contacten, foto's en soms opslaan: kijk even rond in de menu's.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "telefoon-2",
+   "cat": "Telefoon",
+   "status": "check",
+   "titel": "Deel je beste momenten",
+   "tekst": "Met de Xbox-knop maak je een opname of screenshot van wat net gebeurde.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "algemeen-1",
+   "cat": "Algemeen",
+   "status": "check",
+   "titel": "Pauze = beter spelen",
+   "tekst": "Lukt een missie na 5 keer nog niet? Even pauze, daarna gaat het vaak ineens wel.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "algemeen-2",
+   "cat": "Algemeen",
+   "status": "check",
+   "titel": "Pas op voor spoilers",
+   "tekst": "Wil je het verhaal zelf ontdekken? Kijk dan de eerste weken niet te veel filmpjes.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "algemeen-3",
+   "cat": "Algemeen",
+   "status": "check",
+   "titel": "Ondertitels aan",
+   "tekst": "Er wordt veel gepraat. Met ondertitels mis je geen aanwijzingen.",
+   "toegevoegd": "2026-11-19"
+  }
+ ],
+ "eggs": [
+  {
+   "id": "ei-toren",
+   "emoji": "🥚",
+   "titel": "Een écht ei boven op de hoogste toren",
+   "waar": "Vice City",
+   "tekst": "Klim naar de top van de hoogste toren in Vice City (duurt zo'n 6 à 7 minuten). Boven ligt een nest met een ei. Pak het en gooi het… wat gebeurt er?",
+   "x": 345,
+   "y": 352,
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "bigfoot",
+   "emoji": "🦍",
+   "titel": "Bigfoot (de \"Skunk Ape\")",
+   "waar": "Grassrivers",
+   "tekst": "Spelers zien hem vaak op de weg aan de oostkant van Cottonmouth Lake, richting Gambit Bay. Hij komt ook voor in een verhaalmissie.",
+   "x": 305,
+   "y": 325,
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "skunk-beeld",
+   "emoji": "🗿",
+   "titel": "Het Skunk Ape-beeld en Kirk",
+   "waar": "Grassrivers",
+   "tekst": "Er staat ook een beeld van de Skunk Ape, met een opdracht van ene Kirk. Speel ook \"Skunk Apeology 101\".",
+   "x": 275,
+   "y": 345,
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "dexter",
+   "emoji": "🔪",
+   "titel": "Het appartement van Dexter Morgan",
+   "waar": "Washington Island, Vice City",
+   "tekst": "In de buurt van de winkel Vice Beach Top Fun Drones staat het appartement uit de tv-serie Dexter.",
+   "x": 352,
+   "y": 378,
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "jetski-hond",
+   "emoji": "🐶",
+   "titel": "Een hond op een jetski",
+   "waar": "Op het water",
+   "tekst": "Ergens op het water zagen spelers een hond op een jetski. Ogen open als je rondvaart!",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "aaien",
+   "emoji": "🐱",
+   "titel": "Honden en katten aaien",
+   "waar": "Overal",
+   "tekst": "Je kunt honden en katten aaien. Een kat aaien geeft Jason een klein beetje extra focus.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "ufo",
+   "emoji": "🛸",
+   "titel": "Een UFO!",
+   "waar": "Verhaal, hoofdstuk 2",
+   "tekst": "In hoofdstuk 2 kun je een UFO-ontvoering zien.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "chiliad",
+   "emoji": "🍺",
+   "titel": "Praatje over Mount Chiliad",
+   "waar": "Café tijdens het verhaal",
+   "tekst": "In een café praten mensen over Mount Chiliad, de beroemde berg uit GTA V.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "wade",
+   "emoji": "🎙️",
+   "titel": "Wade uit GTA V op een podcast",
+   "waar": "Radio / podcast",
+   "tekst": "Op de podcast \"Final Act\" hoor je Wade uit GTA V.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "rdr",
+   "emoji": "🤠",
+   "titel": "Knipogen naar Red Dead Redemption",
+   "waar": "O.a. Jacob's Tavern in Millport",
+   "tekst": "Op verschillende plekken zitten verwijzingen naar Red Dead Redemption.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "everett",
+   "emoji": "📚",
+   "titel": "Het boek van Tom Everett",
+   "waar": "Huis van Jason",
+   "tekst": "Een verwijzing naar GTA IV. Kijk goed rond in Jasons huis.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "larouche",
+   "emoji": "💪",
+   "titel": "Fabien LaRouche in een sportblad",
+   "waar": "Tijdschrift Body Copy",
+   "tekst": "De yogaleraar uit GTA V staat in het fitnessblad Body Copy.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "raddads",
+   "emoji": "🎸",
+   "titel": "Poster: Rad Dads Redemption Tour",
+   "waar": "Ergens in Leonida",
+   "tekst": "Een concertposter als knipoog naar Red Dead Redemption. Lees de posters!",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "kenteken",
+   "emoji": "🚘",
+   "titel": "Kenteken \"ASS MAN\"",
+   "waar": "Op de weg",
+   "tekst": "Spelers zagen een auto met dit grappige kenteken. Let op de nummerborden.",
+   "toegevoegd": "2026-11-19"
+  }
+ ],
+ "info": [
+  {
+   "id": "release",
+   "titel": "Releasedatum",
+   "tekst": "GTA VI kwam uit op donderdag 19 november 2026, voor PlayStation 5 en Xbox Series X|S. Een pc-versie is nog niet aangekondigd.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "fps",
+   "titel": "30 beelden per seconde",
+   "tekst": "Op alle consoles draait het spel op 30 fps, zonder prestatiestand. Op de Series S wordt het beeld opgeschaald naar 1080p.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "online",
+   "titel": "Nog geen nieuwe GTA Online",
+   "tekst": "Bij de release is er alleen het verhaal (singleplayer). Het oude GTA Online uit GTA V blijft gewoon bestaan.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "helden",
+   "titel": "Lucia en Jason",
+   "tekst": "De twee hoofdpersonen. Het verhaal speelt in Vice City en de rest van de staat Leonida.",
+   "toegevoegd": "2026-11-19"
+  }
+ ],
+ "nieuws": [
+  {
+   "id": "start",
+   "titel": "De app is klaar!",
+   "tekst": "Gefeliciteerd Peike! Tips, easter eggs, een kaart en Xbox-instellingen staan erin. Nieuwe vondsten komen er vanzelf bij.",
+   "datum": "2026-11-19"
+  },
+  {
+   "id": "apk",
+   "titel": "Nu ook als app op je telefoon 📱",
+   "tekst": "De gids staat nu als echte app op je Android-telefoon. Tik op “Check op nieuwe updates” om de nieuwste vondsten op te halen.",
+   "datum": "2026-11-19T18:45"
+  }
+ ]
+}

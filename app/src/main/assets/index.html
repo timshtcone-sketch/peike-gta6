@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peike's GTA VI Gids</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Yellowtail&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0618;--bg2:#160c2e;--glass:rgba(32,18,64,.72);--line:rgba(255,120,200,.22);
+  --pink:#ff3fa4;--hot:#ff2d78;--orange:#ff8a3d;--gold:#ffd166;--teal:#22e4d4;--sky:#7a5cff;
+  --text:#fbf3ff;--muted:#c2b3e6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--text);background:var(--bg);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;
+  background:radial-gradient(900px 500px at 80% 110%,#ff3fa433,transparent 60%),radial-gradient(800px 500px at 0% 0%,#7a5cff33,transparent 60%),var(--bg)}
+/* ---------- hero ---------- */
+.hero{position:relative;height:340px;overflow:hidden;border-bottom:2px solid var(--pink);box-shadow:0 0 30px #ff3fa455}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.hero .titles{position:absolute;left:0;right:0;top:34px;text-align:center;z-index:2;padding:0 12px}
+.script{font-family:Yellowtail,cursive;font-size:clamp(34px,8vw,58px);color:#fff;line-height:1;
+  text-shadow:0 0 6px #fff,0 0 14px var(--pink),0 0 28px var(--pink),0 0 48px var(--hot);transform:rotate(-4deg);display:inline-block}
+.big{font-family:Anton,Impact,sans-serif;font-size:clamp(44px,12vw,92px);line-height:.95;letter-spacing:2px;margin-top:4px;
+  background:linear-gradient(180deg,#fff 0%,var(--gold) 35%,var(--orange) 60%,var(--pink) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 4px 0 #2a0a3a) drop-shadow(0 0 18px #ff3fa488)}
+.tagline{margin-top:8px;font-weight:800;letter-spacing:3px;font-size:12px;color:var(--teal);text-shadow:0 0 10px var(--teal)}
+.livepill{position:absolute;right:12px;top:12px;z-index:3;background:#0b0618cc;border:1px solid var(--teal);color:var(--teal);
+  font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px;letter-spacing:.5px}
+.livepill.off{border-color:var(--muted);color:var(--muted)}
+/* ---------- wanted ---------- */
+.wanted{max-width:900px;margin:-34px auto 0;position:relative;z-index:4;padding:0 14px}
+.wanted .box{background:#0b0618ee;border:1px solid var(--line);border-radius:18px;padding:12px 16px;display:flex;align-items:center;gap:14px;
+  box-shadow:0 10px 30px #0008}
+.stars{display:flex;gap:4px}
+.stars svg{width:30px;height:30px}
+.wanted .lbl{font-family:Anton;letter-spacing:1px;font-size:18px}
+.wanted .lbl small{display:block;font-family:Inter;font-weight:600;font-size:12px;color:var(--muted);letter-spacing:0}
+/* ---------- birthday ---------- */
+.bday{max-width:900px;margin:12px auto 0;padding:0 14px}
+.bday .in{border-radius:18px;padding:14px 16px;display:flex;gap:14px;align-items:center;cursor:pointer;
+  background:linear-gradient(110deg,var(--pink),var(--orange) 60%,var(--gold));color:#1d0820;box-shadow:0 0 24px #ff3fa466;position:relative;overflow:hidden}
+.bday .in:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,#ffffff66 50%,transparent 70%);transform:translateX(-100%);animation:shine 3.5s infinite}
+@keyframes shine{60%,100%{transform:translateX(100%)}}
+.bday .cake{font-size:42px}
+.bday b{font-family:Anton;font-size:22px;letter-spacing:.5px;display:block;font-weight:400}
+.bday small{font-weight:700}
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:20;margin-top:14px;background:#0b0618e8;backdrop-filter:blur(10px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+nav .scroll{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;max-width:900px;margin:0 auto;scrollbar-width:none}
+nav .scroll::-webkit-scrollbar{display:none}
+nav button{flex:0 0 auto;border:1px solid transparent;background:transparent;color:var(--muted);padding:8px 13px;border-radius:12px;
+  font:800 13px Inter;letter-spacing:.3px;cursor:pointer;text-transform:uppercase;transition:.2s}
+nav button:hover{color:#fff}
+nav button.on{color:#fff;border-color:var(--pink);background:#ff3fa41f;box-shadow:0 0 14px #ff3fa455,inset 0 0 10px #ff3fa433;text-shadow:0 0 8px var(--pink)}
+/* ---------- layout ---------- */
+main{max-width:900px;margin:0 auto;padding:18px 14px 80px}
+section{display:none;animation:fade .35s}
+section.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+h2{font-family:Anton;font-weight:400;letter-spacing:1.5px;font-size:30px;margin:18px 0 10px;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--gold),var(--orange),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2 .sub{display:block;font-family:Inter;font-size:13px;letter-spacing:0;text-transform:none;color:var(--muted);-webkit-text-fill-color:var(--muted);font-weight:600}
+.card{background:var(--glass);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:18px;padding:16px;margin-bottom:12px;position:relative;
+  transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:#ff3fa477;box-shadow:0 0 18px #ff3fa422}
+.card h3{margin:0 0 6px;color:#fff;font-size:17px}
+.card p{margin:5px 0;line-height:1.55}
+.muted{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.tag{display:inline-block;font-size:10px;font-weight:800;padding:3px 8px;border-radius:999px;margin-right:6px;vertical-align:middle;letter-spacing:.6px}
+.t-zeker{background:#22e4d422;color:var(--teal);border:1px solid #22e4d466}
+.t-check{background:#ffd16622;color:var(--gold);border:1px solid #ffd16666}
+.t-new{background:var(--hot);color:#fff;box-shadow:0 0 10px var(--hot);animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 2px var(--hot)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.chips button{border:1px solid var(--line);background:#ffffff08;color:var(--muted);padding:7px 12px;border-radius:999px;cursor:pointer;font:700 13px Inter}
+.chips button.on{color:#0b0618;background:var(--teal);border-color:var(--teal);box-shadow:0 0 12px #22e4d466}
+input[type=text],textarea{width:100%;background:#0b0618aa;border:1px solid var(--line);color:var(--text);border-radius:12px;padding:12px;font:15px Inter;outline:none}
+input[type=text]:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px #ff3fa433}
+textarea{min-height:170px;resize:vertical}
+.btn{border:0;border-radius:12px;padding:11px 16px;font:800 14px Inter;cursor:pointer;letter-spacing:.3px;
+  background:linear-gradient(90deg,var(--pink),var(--orange));color:#1d0820;box-shadow:0 4px 16px #ff3fa455}
+.btn:active{transform:translateY(1px)}
+.btn.ghost{background:#ffffff0d;color:var(--text);border:1px solid var(--line);box-shadow:none}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.check{display:flex;gap:10px;align-items:flex-start;padding:10px 2px;border-bottom:1px dashed var(--line);cursor:pointer}
+.check:last-child{border-bottom:0}
+.check input{appearance:none;width:22px;height:22px;flex:0 0 auto;border:2px solid var(--pink);border-radius:7px;margin:1px 0 0;cursor:pointer;display:grid;place-items:center}
+.check input:checked{background:var(--pink);box-shadow:0 0 10px var(--pink)}
+.check input:checked:after{content:"✓";color:#1d0820;font-weight:900;font-size:14px}
+.check.done>span{color:var(--muted)}
+.check.done>span b{text-decoration:line-through}
+.check .x{margin-left:auto;background:none;border:0;color:var(--muted);cursor:pointer;font-size:16px}
+.bar{height:10px;background:#ffffff12;border-radius:999px;overflow:hidden;margin:8px 0 14px}
+.bar div{height:100%;background:linear-gradient(90deg,var(--teal),var(--sky),var(--pink));width:0;transition:width .5s;box-shadow:0 0 10px var(--pink)}
+.clock{font-family:Anton;font-size:76px;text-align:center;margin:6px 0;color:var(--gold);text-shadow:0 0 18px #ff8a3d99;letter-spacing:3px}
+.tipday{font-size:20px;line-height:1.45;font-weight:700}
+.favbtn{position:absolute;right:12px;top:12px;background:none;border:0;font-size:20px;cursor:pointer;filter:grayscale(1);opacity:.6}
+.card.fav .favbtn{filter:none;opacity:1}
+.card.fav{border-color:var(--pink)}
+.egg{display:flex;gap:14px}
+.egg .ico{font-size:34px;line-height:1;filter:drop-shadow(0 0 8px #ff3fa488)}
+.newsitem{border-left:3px solid var(--teal);padding:4px 0 4px 12px;margin:10px 0}
+.newsitem .d{font-size:11px;font-weight:800;color:var(--teal);letter-spacing:.5px}
+.stat{text-align:center;padding:14px 8px}
+.stat .n{font-family:Anton;font-size:38px;color:var(--gold);text-shadow:0 0 12px #ff8a3d88}
+.stat .l{font-size:12px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(140px);background:#0b0618;border:1px solid var(--teal);color:var(--teal);
+  padding:12px 18px;border-radius:14px;font-weight:800;transition:transform .3s;z-index:60;box-shadow:0 0 20px #22e4d455;max-width:90vw;text-align:center}
+.toast.show{transform:translateX(-50%) translateY(0)}
+#mapwrap{position:relative}
+#map{width:100%;max-width:560px;display:block;margin:0 auto;cursor:crosshair;touch-action:manipulation;border-radius:18px;box-shadow:0 0 30px #7a5cff44}
+#pinform{display:none;position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:min(330px,92%);box-shadow:0 10px 40px #000c;margin:0;background:#160c2ef5}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:20px 14px 40px}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<div class="hero">
+  <svg class="scene" viewBox="0 0 1200 340" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#1a0b3d"/><stop offset=".45" stop-color="#5b1f78"/><stop offset=".75" stop-color="#d63a7a"/><stop offset="1" stop-color="#ff8a3d"/>
+      </linearGradient>
+      <linearGradient id="sunG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffe680"/><stop offset=".5" stop-color="#ff8a3d"/><stop offset="1" stop-color="#ff2d78"/>
+      </linearGradient>
+      <linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3a1460"/><stop offset="1" stop-color="#0b0618"/>
+      </linearGradient>
+      <mask id="sunM"><rect width="1200" height="340" fill="#fff"/>
+        <g fill="#000"><rect y="200" width="1200" height="5"/><rect y="215" width="1200" height="7"/><rect y="232" width="1200" height="9"/><rect y="251" width="1200" height="11"/></g></mask>
+    </defs>
+    <rect width="1200" height="340" fill="url(#skyG)"/>
+    <g fill="#fff" opacity=".7"><circle cx="90" cy="40" r="1.2"/><circle cx="260" cy="70" r="1"/><circle cx="420" cy="30" r="1.4"/><circle cx="980" cy="50" r="1.2"/><circle cx="1110" cy="90" r="1"/><circle cx="760" cy="26" r="1"/></g>
+    <circle cx="600" cy="268" r="120" fill="url(#sunG)" mask="url(#sunM)"/>
+    <!-- skyline -->
+    <g fill="#2a0e47">
+      <rect x="330" y="200" width="34" height="80"/><rect x="368" y="176" width="26" height="104"/><rect x="398" y="210" width="40" height="70"/>
+      <rect x="442" y="160" width="22" height="120"/><rect x="468" y="190" width="30" height="90"/><rect x="700" y="186" width="30" height="94"/>
+      <rect x="734" y="150" width="24" height="130"/><rect x="762" y="196" width="40" height="84"/><rect x="806" y="170" width="28" height="110"/><rect x="838" y="208" width="36" height="72"/>
+      <polygon points="442,160 453,140 464,160"/><polygon points="734,150 746,124 758,150"/>
+    </g>
+    <g fill="#ff3fa4" opacity=".75"><rect x="372" y="186" width="4" height="4"/><rect x="384" y="200" width="4" height="4"/><rect x="740" y="166" width="4" height="4"/><rect x="748" y="190" width="4" height="4"/><rect x="812" y="186" width="4" height="4"/><rect x="448" y="176" width="4" height="4"/></g>
+    <rect y="280" width="1200" height="60" fill="url(#seaG)"/>
+    <g stroke="#ff8a3d" stroke-width="2" opacity=".6"><line x1="520" y1="290" x2="680" y2="290"/><line x1="545" y1="302" x2="655" y2="302"/><line x1="568" y1="314" x2="632" y2="314"/></g>
+    <!-- palms -->
+    <g fill="#0b0618">
+      <path d="M150 340 C158 270 170 210 196 160 L203 163 C180 214 170 272 166 340 Z"/>
+      <path d="M199 160 C160 140 120 150 90 176 C130 160 165 162 199 168Z"/><path d="M199 160 C176 128 140 116 108 120 C146 132 172 146 199 166Z"/>
+      <path d="M199 160 C214 124 246 106 282 108 C250 122 226 140 201 166Z"/><path d="M199 160 C238 146 276 154 300 180 C268 166 236 164 201 168Z"/><path d="M199 160 C196 130 182 104 160 90 C176 112 188 136 197 166Z"/>
+      <path d="M1040 340 C1034 280 1024 226 1002 184 L995 187 C1014 228 1024 282 1026 340Z"/>
+      <path d="M999 184 C1034 164 1072 170 1098 194 C1064 180 1032 182 999 192Z"/><path d="M999 184 C1018 152 1050 140 1080 144 C1048 156 1024 170 999 190Z"/>
+      <path d="M999 184 C982 150 952 134 920 136 C950 150 974 166 997 190Z"/><path d="M999 184 C962 172 928 180 904 204 C936 190 966 188 997 192Z"/>
+      <path d="M1104 340 C1100 296 1092 262 1078 236 L1072 238 C1086 264 1092 298 1094 340Z"/>
+      <path d="M1076 236 C1100 222 1126 226 1144 244 C1120 234 1098 236 1076 242Z"/><path d="M1076 236 C1060 214 1036 208 1012 212 C1036 220 1054 230 1074 242Z"/><path d="M1076 236 C1086 212 1106 200 1130 200 C1108 210 1092 222 1078 240Z"/>
+    </g>
+  </svg>
+  <div class="livepill off" id="livepill">⏳ laden…</div>
+  <div class="titles">
+    <div class="script">Peike's</div>
+    <div class="big">LEONIDA GIDS</div>
+    <div class="tagline">GTA VI · TIPS · GEHEIMEN · KAART</div>
+  </div>
+</div>
+
+<div class="wanted"><div class="box">
+  <div class="stars" id="stars"></div>
+  <div class="lbl" id="wantedLbl">ONTDEKKER-LEVEL<small>Vink dingen af om sterren te verdienen</small></div>
+</div></div>
+
+<div class="bday"><div class="in" id="bday">
+  <div class="cake">🎂</div>
+  <div><b id="bdayTitle">GEFELICITEERD PEIKE!</b><small id="bdayText">Jarig op 19 november én GTA VI komt dezelfde dag uit. Tik hier voor feest!</small></div>
+</div></div>
+
+<nav><div class="scroll" id="nav">
+  <button data-s="home" class="on">🏠 Home</button>
+  <button data-s="tips">💡 Tips</button>
+  <button data-s="eggs">🥚 Easter eggs</button>
+  <button data-s="kaart">🗺️ Kaart</button>
+  <button data-s="weetjes">📰 Weetjes</button>
+  <button data-s="xbox">🎮 Xbox</button>
+  <button data-s="doelen">✅ Doelen</button>
+  <button data-s="notes">📝 Notities</button>
+  <button data-s="timer">⏱️ Speeltijd</button>
+  <button data-s="jarig">🎂 Jarig</button>
+</div></nav>
+
+<main>
+
+<!-- HOME -->
+<section id="home" class="on">
+  <div class="stats">
+    <div class="card stat"><div class="n" id="sTips">0</div><div class="l">tips</div></div>
+    <div class="card stat"><div class="n" id="sEggs">0/0</div><div class="l">eggs gevonden</div></div>
+    <div class="card stat"><div class="n" id="sReg">0/6</div><div class="l">gebieden</div></div>
+    <div class="card stat"><div class="n" id="sDoel">0</div><div class="l">doelen gehaald</div></div>
+  </div>
+  <h2>Nieuw in de app<span class="sub">Hier zie je wat er laatst is bijgekomen</span></h2>
+  <div class="card" id="newslist"><p class="muted">Laden…</p></div>
+  <button class="btn" id="updBtn" style="display:none;width:100%;margin-bottom:8px">🔄 Check op nieuwe updates</button>
+  <h2>Tip van de dag</h2>
+  <div class="card">
+    <div class="muted" id="dagcat"></div>
+    <p class="tipday" id="dagtip"></p>
+    <div class="row" style="margin-top:12px"><button class="btn" id="nieuweTip">🎲 Nog een tip</button><button class="btn ghost" id="favDag">❤️ Bewaar</button></div>
+  </div>
+  <h2>Je eerste uur<span class="sub">Zo begin je slim in Leonida</span></h2>
+  <div class="card">
+    <p><b>1. Doe eerst de openingsmissies.</b> Die leren je de besturing en zetten de rest van het spel open.</p>
+    <p><b>2. Instellingen checken.</b> Ondertitels aan, camera en richthulp goed zetten (zie het tabblad 🎮 Xbox).</p>
+    <p><b>3. Bewaar vaak.</b> Vooral voordat je iets geks gaat proberen.</p>
+    <p><b>4. Eén doel per keer.</b> De kaart is enorm: kies een plek, ga erheen, en verken onderweg.</p>
+    <p><b>5. Spaar je geld.</b> Dure auto's en kleren kunnen wachten.</p>
+  </div>
+  <h2>Mijn favoriete tips</h2>
+  <div id="favlist"></div>
+</section>
+
+<!-- TIPS -->
+<section id="tips">
+  <h2>Tips &amp; tricks<span class="sub"><span class="tag t-zeker">ZEKER</span> bevestigd · <span class="tag t-check">CHECK</span> zo was het in eerdere GTA's, kijk of het klopt</span></h2>
+  <input type="text" id="zoek" placeholder="🔍 Zoek een tip… (bv. politie, auto, geld)">
+  <div class="chips" id="cats"></div>
+  <div id="tiplist"></div>
+</section>
+
+<!-- EASTER EGGS -->
+<section id="eggs">
+  <h2>Easter eggs<span class="sub">Geheimen en knipogen die spelers gevonden hebben. Vink af wat jij zelf gevonden hebt.</span></h2>
+  <div class="bar"><div id="eggbar"></div></div>
+  <div id="egglist"></div>
+</section>
+
+<!-- KAART -->
+<section id="kaart">
+  <h2>Kaart van Leonida<span class="sub">Getekende kaart, niet de echte uit het spel. Tik op de kaart om een eigen plek toe te voegen.</span></h2>
+  <div class="chips" id="pinfilter"></div>
+  <div id="mapwrap">
+    <svg id="map" viewBox="0 0 400 520"></svg>
+    <div id="pinform" class="card">
+      <h3 id="pinTitle">Nieuwe plek</h3>
+      <input type="text" id="pinNaam" placeholder="Naam, bv. 'Snelle rode auto'">
+      <div class="chips" id="pinSoort"></div>
+      <div class="row"><button class="btn" id="pinOk">Opslaan</button><button class="btn ghost" id="pinDel" style="display:none">🗑 Weg</button><button class="btn ghost" id="pinCancel">Annuleer</button></div>
+    </div>
+  </div>
+  <div class="card" id="pinlist" style="margin-top:12px"></div>
+  <h2>Gebieden<span class="sub">Vink aan waar je al geweest bent</span></h2>
+  <div class="bar"><div id="kaartbar"></div></div>
+  <div class="grid" id="regios"></div>
+</section>
+
+<!-- WEETJES -->
+<section id="weetjes">
+  <h2>Weetjes &amp; info<span class="sub">Handige dingen om te weten over GTA VI</span></h2>
+  <div id="infolist"></div>
+</section>
+
+<!-- XBOX -->
+<section id="xbox">
+  <h2>Xbox Series S<span class="sub">Vink aan wat je hebt ingesteld</span></h2>
+  <div class="bar"><div id="xbar"></div></div>
+  <div class="card">
+    <h3>Wat je kunt verwachten</h3>
+    <p>GTA VI heeft op geen enkele console een "prestatie"- of "kwaliteit"-stand. Alle consoles draaien op <b>30 beelden per seconde</b>. Op de Series S wordt het beeld van 720p naar 1080p opgeschaald. In heel drukke stukken zakt het soms naar ongeveer 24. Dat is normaal en ligt niet aan je Xbox.</p>
+  </div>
+  <div class="card">
+    <h3>📺 Op de Xbox zelf</h3>
+    <p class="muted">Instellingen → Algemeen → Tv- en weergaveopties</p>
+    <label class="check"><input type="checkbox" data-xs="0"><span><b>Resolutie 1080p.</b> 4K levert op de Series S niets op.</span></label>
+    <label class="check"><input type="checkbox" data-xs="1"><span><b>VRR aan</b> en <b>120 Hz</b> als je tv of monitor dat kan. Dan voelen de dips minder schokkerig.</span></label>
+    <label class="check"><input type="checkbox" data-xs="2"><span><b>ALLM (automatische modus lage latentie) aan</b>, zodat de tv vanzelf naar de gamestand gaat.</span></label>
+    <label class="check"><input type="checkbox" data-xs="3"><span><b>HDR10 aan</b> (als de tv HDR heeft) en de app <b>HDR-gamekalibratie</b> één keer doorlopen.</span></label>
+    <label class="check"><input type="checkbox" data-xs="4"><span><b>Op de tv: Motion Smoothing / bewegingsvloeiing uit</b> en de Game-stand aan.</span></label>
+  </div>
+  <div class="card">
+    <h3>⚙️ In het spel (om mee te beginnen)</h3>
+    <label class="check"><input type="checkbox" data-xs="5"><span><b>Richthulp op gemiddeld of hoger.</b> Het spel richt standaard vooral vrij.</span></label>
+    <label class="check"><input type="checkbox" data-xs="6"><span><b>Kijk- en richtgevoeligheid rond 6–7</b>, daarna aanpassen op gevoel.</span></label>
+    <label class="check"><input type="checkbox" data-xs="7"><span><b>Minikaart op "Klassiek".</b></span></label>
+    <label class="check"><input type="checkbox" data-xs="8"><span><b>Filmische kill- en crashcamera uit</b> als je die onderbrekingen irritant vindt.</span></label>
+    <label class="check"><input type="checkbox" data-xs="9"><span><b>Helderheid en ondertitels</b> goed zetten, en first person eens uitproberen.</span></label>
+    <p class="muted">De namen kunnen in het Nederlandse menu iets anders zijn.</p>
+  </div>
+  <h2>Elite controller</h2>
+  <div class="card"><h3>🕹️ Achterpeddels: de grootste winst</h3>
+    <p>Zet de knoppen A, B, X en Y op de 4 peddels achterop. Dan blijft je rechterduim op de stick en kun je tegelijk richten en springen, bukken of herladen.</p>
+    <p class="muted">Instellen via de app <b>Xbox-accessoires</b> → Elite-controller → Configureren.</p></div>
+  <div class="card"><h3>🎯 Trekkerstops: niet voor autorijden</h3>
+    <p>Korte trekkers zijn sneller bij het schieten, maar <b>RT is ook gas geven</b>, en dan doseer je minder precies. Laat ze lang staan, of maak twee profielen.</p></div>
+  <div class="card"><h3>👤 Profielen</h3>
+    <p>1️⃣ <b>Normaal</b>: peddels aan, trekkers lang.<br>2️⃣ <b>Actie</b>: peddels aan, korte trekkers, iets snellere sticks.<br>3️⃣ <b>Rustig</b>: alles standaard, voor als iemand anders speelt.</p></div>
+  <div class="card"><h3>🔧 Overige tips</h3>
+    <p>• Bij de <b>Series 2</b>: stickspanning strakker = preciezer richten.<br>• Een hoger stickkopje rechts geeft meer precisie.<br>• De <b>shift</b>-functie geeft knoppen een tweede taak. Pas proberen als je de besturing goed kent.<br>• Laad de ingebouwde batterij op tijd op.</p></div>
+</section>
+
+<!-- DOELEN -->
+<section id="doelen">
+  <h2>Mijn doelen</h2>
+  <div class="bar"><div id="doelbar"></div></div>
+  <div class="card">
+    <div class="row"><input type="text" id="nieuwDoel" placeholder="Nieuw doel, bv. 'snelste auto vinden'" style="flex:1"><button class="btn" id="addDoel">+ Toevoegen</button></div>
+    <div id="doellijst" style="margin-top:8px"></div>
+  </div>
+</section>
+
+<!-- NOTITIES -->
+<section id="notes">
+  <h2>Mijn notities</h2>
+  <div class="card">
+    <p class="muted">Coole plekken, auto's, routes, dingen die je nog moet doen…</p>
+    <textarea id="notitie" placeholder="Bv. 'Mooie boot gezien bij de haven van Vice City…'"></textarea>
+    <p class="muted" id="saved">Wordt vanzelf bewaard op dit apparaat.</p>
+  </div>
+</section>
+
+<!-- TIMER -->
+<section id="timer">
+  <h2>Speeltijd-wekker</h2>
+  <div class="card">
+    <p style="text-align:center">Als de tijd om is, krijg je een seintje: bewaren, pauze, wat drinken.</p>
+    <div class="clock" id="klok">60:00</div>
+    <div class="chips" id="tijden" style="justify-content:center">
+      <button data-m="30">30 min</button><button data-m="45">45 min</button><button data-m="60" class="on">1 uur</button><button data-m="90">1,5 uur</button><button data-m="120">2 uur</button>
+    </div>
+    <div class="row" style="justify-content:center"><button class="btn" id="startT">▶ Start</button><button class="btn ghost" id="stopT">⏸ Pauze</button><button class="btn ghost" id="resetT">↺ Reset</button></div>
+    <p class="muted" style="text-align:center;margin-top:10px">5 minuten voor het einde krijg je een seintje om alvast te bewaren.</p>
+  </div>
+</section>
+
+<!-- JARIG -->
+<section id="jarig">
+  <h2>Peike is jarig! 🎉</h2>
+  <div class="card" style="text-align:center">
+    <div style="font-size:76px;cursor:pointer" id="cake2">🎂</div>
+    <p class="tipday" id="kaarsjes">Tik op de taart om de kaarsjes uit te blazen!</p>
+    <button class="btn" id="feest">🎊 Feest!</button>
+  </div>
+  <div class="card"><h3>Verjaardags-missies</h3><p class="muted">Kleine uitdagingen voor je eerste speeldag.</p><div id="bdaylijst"></div></div>
+  <div class="card"><h3>Felicitaties</h3><p class="muted">Laat hier een berichtje voor Peike achter.</p>
+    <div class="row"><input type="text" id="wens" placeholder="Bv. 'Gefeliciteerd! Veel plezier in Vice City – Papa'" style="flex:1"><button class="btn" id="addWens">Plaats</button></div>
+    <div id="wensen" style="margin-top:10px"></div></div>
+</section>
+
+</main>
+<footer>Gemaakt voor Peike · Spoilervrije fan-gids, geen officiële Rockstar-app · Wordt bijgewerkt via Claude</footer>
+<div class="toast" id="toast"></div>
+
+<script>
+// ================= helpers =================
+const store={get(k,d){try{const v=localStorage.getItem('peike_'+k);return v?JSON.parse(v):d}catch(e){return d}},
+  set(k,v){try{localStorage.setItem('peike_'+k,JSON.stringify(v))}catch(e){}}};
+const $=s=>document.querySelector(s);
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),2400)}
+function isNew(d){if(!d)return false;const t=Date.parse(d);return !isNaN(t)&&(Date.now()-t)<8*864e5}
+const NEWTAG='<span class="tag t-new">NIEUW</span>';
+
+// ================= ingebouwde inhoud (reserve als de database niet bereikbaar is) =================
+const D='2026-11-19';
+let TIPS=[
+ ['rijden-1','Rijden','check','Rem af vóór de bocht, niet erin','Gas los en remmen vlak vóór de bocht, daarna weer gas. Wie in de bocht pas remt, glijdt eruit.'],
+ ['rijden-2','Rijden','check','Handrem voor scherpe bochten','Een korte tik op de handrem laat de auto draaien. Te lang = spin. Oefen eerst op een leeg parkeerterrein.'],
+ ['rijden-3','Rijden','check','Elke auto rijdt anders','Sportwagens zijn snel maar nerveus, terreinwagens traag maar sterk. Neem buiten de stad iets stevigs.'],
+ ['rijden-4','Rijden','check','Route op de minikaart','Zet een markering op de kaart, dan krijg je een lijn op je minikaart.'],
+ ['politie-1','Politie','check','Uit het zicht = sneller kwijt','Blijf buiten het zicht van agenten: steegjes, tunnels, onder bruggen of een garage in.'],
+ ['politie-2','Politie','check','Let op de minikaart','Daar zie je waar agenten zoeken. Rij er omheen in plaats van erdoorheen.'],
+ ['politie-3','Politie','check','Van auto wisselen helpt','Agenten zoeken vaak de auto waarin je gezien werd. Ver uit het zicht wisselen kan helpen.'],
+ ['geld-1','Geld','check','Missies eerst, winkelen later','Verhaalmissies leveren vaak het meeste op en zetten nieuwe dingen open.'],
+ ['geld-2','Geld','check','Repareren is goedkoper dan nieuw','Is je favoriete auto beschadigd? Zoek een werkplaats.'],
+ ['missies-1','Missies','zeker','Twee hoofdpersonen','Je speelt met Lucia en Jason. Let op wie er bij een missie hoort.'],
+ ['missies-2','Missies','check','Mislukt? Gewoon opnieuw','Bij de meeste missies kun je vanaf een checkpoint opnieuw. Probeer een andere aanpak.'],
+ ['missies-3','Missies','check','Lees de opdracht onderin','Daar staat precies wat je moet doen, bv. "volg de auto, niet te dichtbij".'],
+ ['verkennen-1','Verkennen','zeker','Leonida is meer dan Vice City','Ook de Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia en Mount Kalaga.'],
+ ['verkennen-2','Verkennen','check','Pas op in het moeras','In moerassen kunnen wilde dieren zitten. Blijf in je boot of auto als je het niet vertrouwt.'],
+ ['verkennen-3','Verkennen','check','Boten zijn superhandig','Rond Vice City en de Keys ben je met een boot soms sneller dan over de weg.'],
+ ['verkennen-4','Verkennen','check','Verken \'s avonds én overdag','Steden zien er \'s nachts heel anders uit en er gebeuren dan soms andere dingen.'],
+ ['telefoon-1','Telefoon','check','Je telefoon is je beste vriend','Berichten, contacten, foto\'s en soms opslaan: kijk even rond in de menu\'s.'],
+ ['telefoon-2','Telefoon','check','Deel je beste momenten','Met de Xbox-knop maak je een opname of screenshot van wat net gebeurde.'],
+ ['algemeen-1','Algemeen','check','Pauze = beter spelen','Lukt een missie na 5 keer nog niet? Even pauze, daarna gaat het vaak ineens wel.'],
+ ['algemeen-2','Algemeen','check','Pas op voor spoilers','Wil je het verhaal zelf ontdekken? Kijk dan de eerste weken niet te veel filmpjes.'],
+ ['algemeen-3','Algemeen','check','Ondertitels aan','Er wordt veel gepraat. Met ondertitels mis je geen aanwijzingen.'],
+].map(([id,cat,status,titel,tekst])=>({id,cat,status,titel,tekst,toegevoegd:D}));
+let EGGS=[
+ ['ei-toren','🥚','Een écht ei boven op de hoogste toren','Vice City','Klim naar de top van de hoogste toren in Vice City (duurt zo\'n 6 à 7 minuten). Boven ligt een nest met een ei. Pak het en gooi het… wat gebeurt er?',345,352],
+ ['bigfoot','🦍','Bigfoot (de "Skunk Ape")','Grassrivers','Spelers zien hem vaak op de weg aan de oostkant van Cottonmouth Lake, richting Gambit Bay. Hij komt ook voor in een verhaalmissie.',305,325],
+ ['skunk-beeld','🗿','Het Skunk Ape-beeld en Kirk','Grassrivers','Er staat ook een beeld van de Skunk Ape, met een opdracht van ene Kirk. Speel ook "Skunk Apeology 101".',275,345],
+ ['dexter','🔪','Het appartement van Dexter Morgan','Washington Island, Vice City','In de buurt van de winkel Vice Beach Top Fun Drones staat het appartement uit de tv-serie Dexter.',352,378],
+ ['jetski-hond','🐶','Een hond op een jetski','Op het water','Ergens op het water zagen spelers een hond op een jetski. Ogen open als je rondvaart!',null,null],
+ ['aaien','🐱','Honden en katten aaien','Overal','Je kunt honden en katten aaien. Een kat aaien geeft Jason een klein beetje extra focus.',null,null],
+ ['ufo','🛸','Een UFO!','Verhaal, hoofdstuk 2','In hoofdstuk 2 kun je een UFO-ontvoering zien.',null,null],
+ ['chiliad','🍺','Praatje over Mount Chiliad','Café tijdens het verhaal','In een café praten mensen over Mount Chiliad, de beroemde berg uit GTA V.',null,null],
+ ['wade','🎙️','Wade uit GTA V op een podcast','Radio / podcast','Op de podcast "Final Act" hoor je Wade uit GTA V.',null,null],
+ ['rdr','🤠','Knipogen naar Red Dead Redemption','O.a. Jacob\'s Tavern in Millport','Op verschillende plekken zitten verwijzingen naar Red Dead Redemption.',null,null],
+ ['everett','📚','Het boek van Tom Everett','Huis van Jason','Een verwijzing naar GTA IV. Kijk goed rond in Jasons huis.',null,null],
+ ['larouche','💪','Fabien LaRouche in een sportblad','Tijdschrift Body Copy','De yogaleraar uit GTA V staat in het fitnessblad Body Copy.',null,null],
+ ['raddads','🎸','Poster: Rad Dads Redemption Tour','Ergens in Leonida','Een concertposter als knipoog naar Red Dead Redemption. Lees de posters!',null,null],
+ ['kenteken','🚘','Kenteken "ASS MAN"','Op de weg','Spelers zagen een auto met dit grappige kenteken. Let op de nummerborden.',null,null],
+].map(([id,emoji,titel,waar,tekst,x,y])=>({id,emoji,titel,waar,tekst,x,y,toegevoegd:D}));
+let INFO=[
+ {id:'release',titel:'Releasedatum',tekst:'GTA VI kwam uit op donderdag 19 november 2026, voor PlayStation 5 en Xbox Series X|S. Een pc-versie is nog niet aangekondigd.',toegevoegd:D},
+ {id:'fps',titel:'30 beelden per seconde',tekst:'Op alle consoles draait het spel op 30 fps, zonder prestatiestand. Op de Series S wordt het beeld opgeschaald naar 1080p.',toegevoegd:D},
+ {id:'online',titel:'Nog geen nieuwe GTA Online',tekst:'Bij de release is er alleen het verhaal (singleplayer). Het oude GTA Online uit GTA V blijft gewoon bestaan.',toegevoegd:D},
+ {id:'helden',titel:'Lucia en Jason',tekst:'De twee hoofdpersonen. Het verhaal speelt in Vice City en de rest van de staat Leonida.',toegevoegd:D},
+];
+let NEWS=[{id:'start',titel:'De app is klaar!',tekst:'Gefeliciteerd Peike! Tips, easter eggs, een kaart en Xbox-instellingen staan erin. Nieuwe vondsten komen er vanzelf bij.',datum:D}];
+const REG=[
+ {n:'Vice City',e:'🌆',d:'De grote stad: neonlicht, stranden en hoge gebouwen.'},
+ {n:'Leonida Keys',e:'🏝️',d:'Eilandjes met bruggen en veel water. Ideaal voor boten.'},
+ {n:'Grassrivers',e:'🐊',d:'Moerasgebied met smalle waterwegen. Rustig aan!'},
+ {n:'Port Gellhorn',e:'⚓',d:'Een havenplaats met een heel eigen sfeer.'},
+ {n:'Ambrosia',e:'🌾',d:'Buiten de stad, met een landelijk gevoel.'},
+ {n:'Mount Kalaga National Park',e:'⛰️',d:'Bergen en bossen. Neem een terreinwagen mee.'},
+];
+
+// ================= navigatie =================
+function show(id){if(!document.getElementById(id))return;document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===id));
+  document.querySelectorAll('#nav button').forEach(b=>{const on=b.dataset.s===id;b.classList.toggle('on',on);if(on)b.scrollIntoView({inline:'center',block:'nearest'})});
+  try{history.replaceState(null,'','#'+id)}catch(e){}}
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{show(b.dataset.s);window.scrollTo({top:$('nav').offsetTop,behavior:'smooth'})});
+{const h=location.hash.slice(1);if(h)show(h)}
+addEventListener('hashchange',()=>show(location.hash.slice(1)));
+
+// ================= voortgang (per apparaat) =================
+let favs=store.get('favs2',[]),eggsF=store.get('eggs2',[]),bezocht=store.get('bezocht',[]),
+    doelen=store.get('doelen',[{t:'De openingsmissies afmaken',d:false},{t:'Een auto vinden die ik echt mooi vind',d:false},{t:'Met een boot naar de Leonida Keys',d:false},{t:'Een mooie foto maken bij zonsondergang',d:false},{t:'Een missie halen in één keer',d:false}]),
+    xs=store.get('xs',[]),bm=store.get('bm',[]),pins=store.get('pins',[]);
+
+function renderStars(){
+  const tot=EGGS.length+REG.length+doelen.length+10, got=eggsF.filter(id=>EGGS.some(e=>e.id===id)).length+bezocht.length+doelen.filter(d=>d.d).length+xs.length;
+  const n=Math.min(5,Math.floor(got/Math.max(1,tot)*5.0001+ (got>0?0.5:0)));
+  const st=(f)=>`<svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.5 5.8 21.1l1.6-7L2 9.3l7.1-.7z" fill="${f?'#ffd166':'none'}" stroke="${f?'#ffd166':'#c2b3e6'}" stroke-width="1.6" ${f?'style="filter:drop-shadow(0 0 5px #ff8a3d)"':''}/></svg>`;
+  $('#stars').innerHTML=[0,1,2,3,4].map(i=>st(i<n)).join('');
+  const lv=['Nieuweling','Toerist','Verkenner','Kenner','Expert','Legende van Leonida'][n];
+  $('#wantedLbl').innerHTML=`${lv.toUpperCase()}<small>${got} van ${tot} dingen afgevinkt</small>`;
+  $('#sTips').textContent=TIPS.length;$('#sEggs').textContent=eggsF.filter(id=>EGGS.some(e=>e.id===id)).length+'/'+EGGS.length;
+  $('#sReg').textContent=bezocht.length+'/'+REG.length;$('#sDoel').textContent=doelen.filter(d=>d.d).length;
+}
+
+// ================= tips =================
+let cat='Alle';
+function tipCard(t){const f=favs.includes(t.id);
+  return `<div class="card ${f?'fav':''}"><button class="favbtn" data-f="${esc(t.id)}" title="Bewaar">❤️</button>
+  <h3>${isNew(t.toegevoegd)?NEWTAG:''}${esc(t.titel)}</h3><p><span class="tag ${t.status==='zeker'?'t-zeker':'t-check'}">${t.status==='zeker'?'ZEKER':'CHECK'}</span>${esc(t.tekst)}</p>
+  <div class="muted">${esc(t.cat)}</div></div>`}
+function renderCats(){const cats=['Alle',...new Set(TIPS.map(t=>t.cat))];
+  $('#cats').innerHTML=cats.map(c=>`<button data-c="${esc(c)}" class="${c===cat?'on':''}">${esc(c)}</button>`).join('')}
+$('#cats').onclick=e=>{const b=e.target.closest('[data-c]');if(!b)return;cat=b.dataset.c;renderCats();renderTips()};
+$('#zoek').oninput=()=>renderTips();
+function renderTips(){const q=$('#zoek').value.toLowerCase();
+  const l=TIPS.filter(t=>(cat==='Alle'||t.cat===cat)&&(t.titel+t.tekst+t.cat).toLowerCase().includes(q))
+    .sort((a,b)=>(isNew(b.toegevoegd)-isNew(a.toegevoegd)));
+  $('#tiplist').innerHTML=l.map(tipCard).join('')||'<p class="muted">Geen tips gevonden.</p>'}
+function renderFavs(){const l=favs.map(id=>TIPS.find(t=>t.id===id)).filter(Boolean);
+  $('#favlist').innerHTML=l.length?l.map(tipCard).join(''):'<div class="card"><p class="muted">Tik op het hartje bij een tip om hem hier te bewaren.</p></div>'}
+function toggleFav(id){favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];store.set('favs2',favs);renderTips();renderFavs();
+  toast(favs.includes(id)?'Bewaard bij favorieten ❤️':'Uit favorieten gehaald')}
+document.addEventListener('click',e=>{const f=e.target.closest('[data-f]');if(f)toggleFav(f.dataset.f)});
+let dagIdx=0;
+function renderDag(){if(!TIPS.length)return;const t=TIPS[dagIdx%TIPS.length];$('#dagcat').textContent=t.cat+(t.status==='zeker'?' · bevestigd':' · check in het spel');
+  $('#dagtip').textContent=t.titel+': '+t.tekst}
+$('#nieuweTip').onclick=()=>{if(TIPS.length<2)return;let n;do{n=Math.floor(Math.random()*TIPS.length)}while(n===dagIdx);dagIdx=n;renderDag()};
+$('#favDag').onclick=()=>{const t=TIPS[dagIdx%TIPS.length];if(!favs.includes(t.id))toggleFav(t.id);else toast('Staat al bij je favorieten')};
+
+// ================= easter eggs =================
+function renderEggs(){const l=[...EGGS].sort((a,b)=>(isNew(b.toegevoegd)-isNew(a.toegevoegd)));
+  $('#egglist').innerHTML=l.map(g=>{const f=eggsF.includes(g.id);return `<div class="card"><div class="egg"><div class="ico">${esc(g.emoji||'🥚')}</div><div style="flex:1">
+  <label class="check ${f?'done':''}" style="border:0;padding:0"><input type="checkbox" data-g="${esc(g.id)}" ${f?'checked':''}><span><b style="font-size:17px">${isNew(g.toegevoegd)?NEWTAG:''}${esc(g.titel)}</b></span></label>
+  <p>${esc(g.tekst)}</p><div class="muted">📍 ${esc(g.waar)}${g.x!=null?' · <a href="#kaart" style="color:var(--teal)">staat op je kaart</a>':''}</div></div></div></div>`}).join('');
+  const k=eggsF.filter(id=>EGGS.some(e=>e.id===id)).length;$('#eggbar').style.width=(EGGS.length?k/EGGS.length*100:0)+'%'}
+$('#egglist').onchange=e=>{const id=e.target.dataset.g;if(!id)return;eggsF=e.target.checked?[...eggsF,id]:eggsF.filter(x=>x!==id);store.set('eggs2',eggsF);
+  renderEggs();drawMap();renderStars();if(e.target.checked)toast('Easter egg gevonden! 🥚');
+  if(EGGS.every(g=>eggsF.includes(g.id))){toast('Alle easter eggs gevonden! 🏆');confetti()}};
+
+// ================= weetjes & nieuws =================
+function renderInfo(){const l=[...INFO].sort((a,b)=>(isNew(b.toegevoegd)-isNew(a.toegevoegd))||String(a.titel).localeCompare(b.titel));
+  $('#infolist').innerHTML=l.map(i=>`<div class="card"><h3>${isNew(i.toegevoegd)?NEWTAG:''}${esc(i.titel)}</h3><p>${esc(i.tekst)}</p></div>`).join('')||'<p class="muted">Nog geen weetjes.</p>'}
+function renderNews(){const l=[...NEWS].sort((a,b)=>String(b.datum).localeCompare(String(a.datum))).slice(0,6);
+  $('#newslist').innerHTML=l.map(n=>`<div class="newsitem"><div class="d">${esc(fmtDate(n.datum))}</div><b>${esc(n.titel)}</b><div class="muted" style="font-size:14px;color:var(--text)">${esc(n.tekst)}</div></div>`).join('')||'<p class="muted">Nog geen nieuws.</p>'}
+function fmtDate(d){const t=Date.parse(d);return isNaN(t)?d:new Date(t).toLocaleDateString('nl-NL',{day:'numeric',month:'long',year:'numeric'}).toUpperCase()}
+
+// ================= gebieden =================
+function renderReg(){$('#regios').innerHTML=REG.map((r,i)=>`<div class="card"><div style="font-size:34px">${r.e}</div><h3>${r.n}</h3><p>${r.d}</p>
+ <label class="check ${bezocht.includes(i)?'done':''}" style="border:0;padding:6px 0 0"><input type="checkbox" data-r="${i}" ${bezocht.includes(i)?'checked':''}><span>Hier geweest</span></label></div>`).join('');
+ $('#kaartbar').style.width=(bezocht.length/REG.length*100)+'%'}
+$('#regios').onchange=e=>{const i=+e.target.dataset.r;bezocht=e.target.checked?[...bezocht,i]:bezocht.filter(x=>x!==i);store.set('bezocht',bezocht);renderReg();renderStars();
+ if(bezocht.length===REG.length){toast('Heel Leonida ontdekt! 🏆');confetti()}};
+
+// ================= kaart =================
+const SOORT=[{k:'auto',e:'🚗'},{k:'cool',e:'⭐'},{k:'geld',e:'💰'},{k:'geheim',e:'❓'},{k:'plek',e:'🏠'}];
+let pinFilter='alle',edit=null,newXY=null,soort='cool';
+const REGLBL=[{n:'Port Gellhorn',x:85,y:78},{n:'Mount Kalaga',x:235,y:88},{n:'Ambrosia',x:270,y:215},{n:'Grassrivers',x:262,y:300},{n:'Vice City',x:330,y:400},{n:'Leonida Keys',x:225,y:478}];
+function drawMap(){const fl=pinFilter;
+ let s=`<defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b0f45"/><stop offset="1" stop-color="#0b0618"/></linearGradient>
+ <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2d1a5c"/><stop offset="1" stop-color="#4a1d5e"/></linearGradient>
+ <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#7a5cff22" stroke-width="1"/></pattern>
+ <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+ <rect width="400" height="520" fill="url(#sea)"/><rect width="400" height="520" fill="url(#grid)"/>
+ <path d="M10 40 L250 28 L300 58 L330 118 L346 200 L362 300 L356 382 L332 428 L302 440 L272 410 L242 340 L216 268 L200 200 L178 150 L130 122 L60 112 L10 102 Z" fill="url(#land)" stroke="#ff3fa4" stroke-width="2" filter="url(#glow)"/>
+ <path d="M250 28 L300 58 L330 118 L280 130 L230 110 Z" fill="#22e4d4" opacity=".14"/>
+ <path d="M242 340 L272 410 L302 440 L320 400 L300 330 L262 300 Z" fill="#22e4d4" opacity=".2"/>
+ <path d="M346 340 L362 300 L356 382 L332 428 L325 380 Z" fill="#ff3fa4" opacity=".45"/>
+ <ellipse cx="290" cy="318" rx="16" ry="11" fill="#1b0f45" stroke="#22e4d4" stroke-opacity=".5"/>
+ ${[[305,452],[285,462],[262,470],[240,480],[218,490],[196,498]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="9" ry="4" fill="#ff8a3d" opacity=".7"/>`).join('')}`;
+ REGLBL.forEach(r=>s+=`<text x="${r.x}" y="${r.y}" text-anchor="middle" font-family="Anton" font-size="13" letter-spacing="1" fill="#fff" stroke="#0b0618" stroke-width="3" paint-order="stroke">${r.n.toUpperCase()}</text>`);
+ if(fl==='alle'||fl==='eggs')EGGS.forEach(g=>{if(g.x==null)return;const f=eggsF.includes(g.id);
+   s+=`<g data-egg="${esc(g.id)}" style="cursor:pointer"><circle cx="${+g.x}" cy="${+g.y}" r="13" fill="${f?'#22e4d4':'#ffd166'}" stroke="#0b0618" stroke-width="2" filter="url(#glow)"/><text x="${+g.x}" y="${+g.y+5}" text-anchor="middle" font-size="14">${esc(g.emoji||'🥚')}</text></g>`});
+ pins.forEach((p,i)=>{if(fl!=='alle'&&fl!==p.s)return;const em=(SOORT.find(x=>x.k===p.s)||SOORT[1]).e;
+   s+=`<g data-pin="${i}" style="cursor:pointer"><circle cx="${p.x}" cy="${p.y}" r="12" fill="#ff3fa4" stroke="#fff" stroke-width="2" filter="url(#glow)"/><text x="${p.x}" y="${p.y+5}" text-anchor="middle" font-size="13">${em}</text></g>`});
+ $('#map').innerHTML=s;
+ $('#pinlist').innerHTML='<h3>Mijn plekken</h3>'+(pins.length?pins.map((p,i)=>`<div class="check" data-pinrow="${i}"><span>${(SOORT.find(x=>x.k===p.s)||SOORT[1]).e} ${esc(p.n)}</span></div>`).join(''):'<p class="muted">Nog geen eigen plekken. Tik op de kaart om er een te maken!</p>')}
+function svgXY(ev){const r=$('#map').getBoundingClientRect();return{x:Math.round((ev.clientX-r.left)/r.width*400),y:Math.round((ev.clientY-r.top)/r.height*520)}}
+function openForm(i,xy){edit=i;newXY=xy;const p=i!=null?pins[i]:null;soort=p?p.s:'cool';
+ $('#pinTitle').textContent=p?'Plek bewerken':'Nieuwe plek';$('#pinNaam').value=p?p.n:'';$('#pinDel').style.display=p?'':'none';
+ renderSoort();$('#pinform').style.display='block';setTimeout(()=>$('#pinNaam').focus(),50)}
+function renderSoort(){$('#pinSoort').innerHTML=SOORT.map(x=>`<button data-k="${x.k}" class="${x.k===soort?'on':''}">${x.e} ${x.k}</button>`).join('')}
+$('#pinSoort').onclick=e=>{const b=e.target.closest('[data-k]');if(b){soort=b.dataset.k;renderSoort()}};
+$('#map').onclick=e=>{const egg=e.target.closest('[data-egg]');if(egg){const g=EGGS.find(x=>x.id===egg.dataset.egg);if(g)toast(g.emoji+' '+g.titel);show('eggs');return}
+ const pin=e.target.closest('[data-pin]');if(pin){openForm(+pin.dataset.pin);return}
+ if($('#pinform').style.display==='block')return;openForm(null,svgXY(e))};
+$('#pinlist').onclick=e=>{const r=e.target.closest('[data-pinrow]');if(r)openForm(+r.dataset.pinrow)};
+$('#pinOk').onclick=()=>{const n=$('#pinNaam').value.trim()||'Mijn plek';
+ if(edit!=null){pins[edit].n=n;pins[edit].s=soort}else pins.push({x:newXY.x,y:newXY.y,n,s:soort});
+ store.set('pins',pins);$('#pinform').style.display='none';drawMap();toast('Plek opgeslagen 📍')};
+$('#pinNaam').onkeydown=e=>{if(e.key==='Enter')$('#pinOk').click()};
+$('#pinDel').onclick=()=>{pins.splice(edit,1);store.set('pins',pins);$('#pinform').style.display='none';drawMap()};
+$('#pinCancel').onclick=()=>{$('#pinform').style.display='none'};
+$('#pinfilter').innerHTML=[{k:'alle',e:'Alles'},{k:'eggs',e:'🥚 eggs'},...SOORT.map(x=>({k:x.k,e:x.e+' '+x.k}))].map(x=>`<button data-pf="${x.k}" class="${x.k==='alle'?'on':''}">${x.e}</button>`).join('');
+$('#pinfilter').onclick=e=>{const b=e.target.closest('[data-pf]');if(!b)return;pinFilter=b.dataset.pf;[...$('#pinfilter').children].forEach(x=>x.classList.toggle('on',x.dataset.pf===pinFilter));drawMap()};
+
+// ================= xbox =================
+const XN=document.querySelectorAll('[data-xs]').length;
+function renderX(){document.querySelectorAll('[data-xs]').forEach(c=>{const i=+c.dataset.xs;c.checked=xs.includes(i);c.closest('.check').classList.toggle('done',c.checked)});$('#xbar').style.width=(xs.length/XN*100)+'%'}
+$('#xbox').onchange=e=>{const d=e.target.dataset.xs;if(d==null)return;const i=+d;xs=e.target.checked?[...xs,i]:xs.filter(x=>x!==i);store.set('xs',xs);renderX();renderStars();
+ if(xs.length===XN){toast('Xbox helemaal klaar voor Leonida! 🎮');confetti()}};
+
+// ================= doelen =================
+function renderDoelen(){$('#doellijst').innerHTML=doelen.map((x,i)=>`<label class="check ${x.d?'done':''}"><input type="checkbox" data-d="${i}" ${x.d?'checked':''}><span><b style="font-weight:600">${esc(x.t)}</b></span><button class="x" data-del="${i}" title="Weg">✕</button></label>`).join('');
+ const k=doelen.filter(x=>x.d).length;$('#doelbar').style.width=(doelen.length?k/doelen.length*100:0)+'%';store.set('doelen',doelen);renderStars()}
+$('#doellijst').onchange=e=>{const i=e.target.dataset.d;if(i==null)return;doelen[i].d=e.target.checked;renderDoelen();if(e.target.checked)toast('Doel gehaald! 💪')};
+$('#doellijst').onclick=e=>{const i=e.target.dataset.del;if(i!=null){e.preventDefault();doelen.splice(i,1);renderDoelen()}};
+function addDoel(){const v=$('#nieuwDoel').value.trim();if(!v)return;doelen.push({t:v,d:false});$('#nieuwDoel').value='';renderDoelen()}
+$('#addDoel').onclick=addDoel;$('#nieuwDoel').onkeydown=e=>{if(e.key==='Enter')addDoel()};
+
+// ================= notities =================
+$('#notitie').value=store.get('notitie','');
+let nt;$('#notitie').oninput=()=>{clearTimeout(nt);nt=setTimeout(()=>{store.set('notitie',$('#notitie').value);$('#saved').textContent='Bewaard ✓ '+new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'})},400)};
+
+// ================= timer =================
+let mins=60,left=3600,tick=null,warned=false;
+const fmt=s=>String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
+const draw=()=>$('#klok').textContent=fmt(left);
+function beep(){try{const a=new (window.AudioContext||window.webkitAudioContext)();[0,.25,.5].forEach(t=>{const o=a.createOscillator(),g=a.createGain();o.frequency.value=880;o.connect(g);g.connect(a.destination);g.gain.value=.15;o.start(a.currentTime+t);o.stop(a.currentTime+t+.15)})}catch(e){}}
+$('#tijden').onclick=e=>{const m=e.target.dataset.m;if(!m)return;mins=+m;[...$('#tijden').children].forEach(b=>b.classList.toggle('on',b.dataset.m===m));clearInterval(tick);tick=null;left=mins*60;warned=false;draw()};
+$('#startT').onclick=()=>{if(tick)return;beep();tick=setInterval(()=>{left--;
+  if(left===300&&!warned){warned=true;toast('Nog 5 minuten: zoek een plek om te bewaren 💾');beep()}
+  if(left<=0){clearInterval(tick);tick=null;left=0;draw();beep();toast('Tijd om! Bewaar je spel en neem pauze 🥤');return}draw()},1000)};
+$('#stopT').onclick=()=>{clearInterval(tick);tick=null};
+$('#resetT').onclick=()=>{clearInterval(tick);tick=null;left=mins*60;warned=false;draw()};
+
+// ================= verjaardag =================
+const now=new Date(),isBday=now.getMonth()===10&&now.getDate()===19;
+if(!isBday){$('#bdayTitle').textContent='PEIKE\'S GTA-VERJAARDAG';$('#bdayText').textContent='Op 19 november werd Peike jarig én kwam GTA VI uit. Tik hier voor feest!'}
+$('#bday').onclick=()=>{confetti();toast('Hiep hiep hoera voor Peike! 🎉')};
+let kaars=5;$('#cake2').onclick=()=>{if(kaars>0){kaars--;$('#kaarsjes').textContent=kaars?`Nog ${kaars} kaarsje${kaars>1?'s':''}…`:'Alle kaarsjes uit! Hiep hiep hoera! 🎉';if(!kaars)confetti()}else confetti()};
+$('#feest').onclick=confetti;
+const BM=['Rij een rondje langs het strand van Vice City','Maak een verjaardagsfoto in het spel','Zoek de mooiste zonsondergang van Leonida','Vaar met een boot onder een brug door','Verzin een naam voor je favoriete auto'];
+function renderBM(){$('#bdaylijst').innerHTML=BM.map((t,i)=>`<label class="check ${bm.includes(i)?'done':''}"><input type="checkbox" data-b="${i}" ${bm.includes(i)?'checked':''}><span><b style="font-weight:600">${t}</b></span></label>`).join('')}
+$('#bdaylijst').onchange=e=>{const i=+e.target.dataset.b;bm=e.target.checked?[...bm,i]:bm.filter(x=>x!==i);store.set('bm',bm);renderBM();if(bm.length===BM.length){toast('Alle verjaardags-missies gehaald! 🏆');confetti()}};
+let wensen=store.get('wensen',[]);
+function renderW(){$('#wensen').innerHTML=wensen.map(w=>`<div class="newsitem">🎈 ${esc(w)}</div>`).join('')}
+function addW(){const v=$('#wens').value.trim();if(!v)return;wensen.unshift(v);store.set('wensen',wensen);$('#wens').value='';renderW();confetti()}
+$('#addWens').onclick=addW;$('#wens').onkeydown=e=>{if(e.key==='Enter')addW()};
+
+// ================= confetti =================
+const cv=$('#confetti'),cx=cv.getContext('2d');let parts=[],anim=null;
+function size(){cv.width=innerWidth;cv.height=innerHeight}size();addEventListener('resize',size);
+function confetti(){const cols=['#ff3fa4','#ff8a3d','#22e4d4','#ffd166','#ffffff','#7a5cff'];
+  for(let i=0;i<170;i++)parts.push({x:Math.random()*cv.width,y:-20-Math.random()*cv.height*.5,vx:(Math.random()-.5)*4,vy:2+Math.random()*4,r:4+Math.random()*6,c:cols[i%cols.length],a:Math.random()*6,va:(Math.random()-.5)*.3});
+  if(!anim)loop()}
+function loop(){cx.clearRect(0,0,cv.width,cv.height);parts=parts.filter(p=>p.y<cv.height+20);
+  parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.a+=p.va;cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;cx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);cx.restore()});
+  anim=parts.length?requestAnimationFrame(loop):null}
+
+// ================= alles tekenen =================
+function renderAll(){renderCats();renderTips();renderFavs();renderDag();renderEggs();renderInfo();renderNews();renderReg();drawMap();renderX();renderDoelen();renderBM();renderW();renderStars()}
+dagIdx=(now.getFullYear()*372+now.getMonth()*31+now.getDate())%TIPS.length;
+renderAll();
+if(isBday)setTimeout(confetti,600);
+
+// ================= live inhoud uit de database (bijgewerkt via Claude) =================
+const CONTENT_URL='https://raw.githubusercontent.com/timshtcone-sketch/peike-gta6/main/content.json';
+function applyJson(j){
+  if(Array.isArray(j.tips)&&j.tips.length)TIPS=j.tips.filter(t=>t.titel).map(t=>({cat:'Algemeen',status:'check',...t}));
+  if(Array.isArray(j.eggs)&&j.eggs.length)EGGS=j.eggs.filter(t=>t.titel).map(g=>({emoji:'🥚',waar:'',x:null,y:null,...g}));
+  if(Array.isArray(j.info)&&j.info.length)INFO=j.info.filter(t=>t.titel);
+  if(Array.isArray(j.nieuws)&&j.nieuws.length)NEWS=j.nieuws.filter(t=>t.titel);
+  renderAll()}
+async function loadJson(manual){
+  const pill=$('#livepill');
+  const cached=store.get('content',null);if(cached&&!manual)applyJson(cached);
+  pill.textContent='🔄 updates zoeken…';
+  try{const r=await fetch(CONTENT_URL+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;const j=await r.json();
+    const was=cached&&cached.bijgewerkt;store.set('content',j);applyJson(j);
+    pill.textContent='● ONLINE · '+(j.bijgewerkt?new Date(Date.parse(j.bijgewerkt)).toLocaleDateString('nl-NL',{day:'numeric',month:'short'}):'');pill.classList.remove('off');
+    if(manual)toast(was&&was===j.bijgewerkt?'Je hebt al de nieuwste inhoud ✓':'Nieuwe inhoud geladen! 🎉');
+  }catch(e){pill.textContent=cached?'📦 offline · laatst bewaard':'📦 ingebouwde inhoud';pill.classList.add('off');if(manual)toast('Geen internet? Probeer het later nog eens.')}
+}
+(async()=>{
+  const pill=$('#livepill');
+  if(!(window.claude&&window.claude.use)){ // APK / gewone browser: updates uit content.json
+    pill.style.cursor='pointer';pill.title='Tik om op updates te checken';pill.onclick=()=>loadJson(true);
+    $('#updBtn').style.display='block';$('#updBtn').onclick=()=>loadJson(true);
+    loadJson(false);return}
+  let db=null;
+  try{db=await window.claude.use('db')}catch(e){db=null}
+  if(!db){pill.textContent='📦 ingebouwde inhoud';return}
+  const loaded={};let timer=setTimeout(()=>{pill.textContent='⚠️ updates nog niet bereikbaar';pill.classList.add('off')},10000);
+  const clean=s=>s.docs.map(d=>Object.assign({id:d.id},d.data()));
+  function sub(col,apply){
+    try{db.collection(col).onSnapshot(snap=>{
+      if(!snap.empty)apply(clean(snap));
+      if(!snap.metadata.fromCache){loaded[col]=true;clearTimeout(timer);
+        const latest=[...NEWS.map(n=>n.datum),...TIPS.map(t=>t.toegevoegd),...EGGS.map(e=>e.toegevoegd),...INFO.map(i=>i.toegevoegd)].filter(Boolean).sort().pop();
+        pill.textContent='● LIVE · update '+(latest?new Date(Date.parse(latest)).toLocaleDateString('nl-NL',{day:'numeric',month:'short'}):'');pill.classList.remove('off')}
+      renderAll();
+    },err=>{clearTimeout(timer);pill.textContent='📦 ingebouwde inhoud';pill.classList.add('off')})}catch(e){}
+  }
+  sub('tips',l=>{TIPS=l.filter(t=>t.titel).map(t=>({cat:'Algemeen',status:'check',...t}))});
+  sub('eggs',l=>{EGGS=l.filter(t=>t.titel).map(g=>({emoji:'🥚',waar:'',x:null,y:null,...g}))});
+  sub('info',l=>{INFO=l.filter(t=>t.titel)});
+  sub('nieuws',l=>{NEWS=l.filter(t=>t.titel)});
+})();
+</script>
+</body>
+</html>
