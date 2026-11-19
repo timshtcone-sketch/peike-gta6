@@ -1,5 +1,5 @@
 {
- "bijgewerkt": "2026-11-19T18:45",
+ "bijgewerkt": "2026-11-19T19:00",
  "tips": [
   {
    "id": "rijden-1",
@@ -168,6 +168,62 @@
    "titel": "Ondertitels aan",
    "tekst": "Er wordt veel gepraat. Met ondertitels mis je geen aanwijzingen.",
    "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "algemeen-4",
+   "cat": "Algemeen",
+   "status": "check",
+   "titel": "Gevechten te moeilijk? Zet hulp aan",
+   "tekst": "In Instellingen > Gameplay staat 'Toegankelijk vechten' (Accessible Combat). Dan krijg je minder schade en deel je meer uit. Het verhaal en je prestaties blijven hetzelfde.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "algemeen-5",
+   "cat": "Algemeen",
+   "status": "check",
+   "titel": "Ken je GTA V? Kies het klassieke schema",
+   "tekst": "Zijn de knoppen vreemd? Ga naar Opties > Instellingen > Besturingsschema en kies 'Classic'. Dan voelt het als in GTA V.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "autos-1",
+   "cat": "Auto's",
+   "status": "check",
+   "titel": "Gestolen auto houden? Pay 'N' Spray",
+   "tekst": "Een gestolen auto blijft niet vanzelf van jou. Laat hem registreren bij een Pay 'N' Spray, dan houd je hem. Je hebt wel een vrij plekje voor je voertuigen nodig.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "autos-2",
+   "cat": "Auto's",
+   "status": "check",
+   "titel": "Laat je auto komen",
+   "tekst": "Staat je auto ergens anders? Met de Scooter Bros-app op je telefoon laat je hem naar je toe brengen. Dat kost wat geld, afhankelijk van de afstand.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "geld-3",
+   "cat": "Geld",
+   "status": "check",
+   "titel": "Breng je geld naar de bank",
+   "tekst": "Geld in je zak ben je kwijt als de politie je pakt of je KO gaat. Open je telefoon (D-pad omhoog), kies BuckMe en zoek een geldautomaat om te storten.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "missies-4",
+   "cat": "Missies",
+   "status": "check",
+   "titel": "Missielijst op de kaart",
+   "tekst": "Open de kaart met de View-knop en ga naar rechts om je verhaalmissies te zien. Druk op A om een route te zetten.",
+   "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "verkennen-5",
+   "cat": "Verkennen",
+   "status": "check",
+   "titel": "Een taxi in plaats van rijden",
+   "tekst": "Zet een route op de kaart en boek een rit met de RydeMe-app. In de auto kun je de rit overslaan voor $100, dus je hoeft niet altijd zelf te rijden.",
+   "toegevoegd": "2026-11-19"
   }
  ],
  "eggs": [
@@ -290,6 +346,16 @@
    "waar": "Op de weg",
    "tekst": "Spelers zagen een auto met dit grappige kenteken. Let op de nummerborden.",
    "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "dexter-boot",
+   "emoji": "🛥️",
+   "titel": "Dexters boot en gereedschap",
+   "waar": "Washington Island, Vice City",
+   "tekst": "Bij Dexters appartement zie je op het dak een set spullen die bij hem past. In de buurt ligt ook een boot die op zijn boot lijkt en die je kunt pakken.",
+   "x": 352,
+   "y": 378,
+   "toegevoegd": "2026-11-19"
   }
  ],
  "info": [
@@ -316,6 +382,12 @@
    "titel": "Lucia en Jason",
    "tekst": "De twee hoofdpersonen. Het verhaal speelt in Vice City en de rest van de staat Leonida.",
    "toegevoegd": "2026-11-19"
+  },
+  {
+   "id": "patch-xbox",
+   "titel": "Tweede dag-één-patch op Xbox",
+   "tekst": "Rockstar bracht vlak voor de release een tweede patch (01.002.001) uit. Op Xbox Series X|S is die ongeveer 1,6 GB. Rockstar heeft er geen officiële lijst met veranderingen bij gezet.",
+   "toegevoegd": "2026-11-19"
   }
  ],
  "nieuws": [
@@ -330,6 +402,18 @@
    "titel": "Nu ook als app op je telefoon 📱",
    "tekst": "De gids staat nu als echte app op je Android-telefoon. Tik op “Check op nieuwe updates” om de nieuwste vondsten op te halen.",
    "datum": "2026-11-19T18:45"
+  },
+  {
+   "id": "neon",
+   "titel": "Nieuwe look 🌴",
+   "tekst": "De app heeft een Vice City-neonstijl gekregen, met wanted-sterren voor je voortgang en een tabblad Weetjes.",
+   "datum": "2026-11-19T18:30"
+  },
+  {
+   "id": "2026-11-19-1900",
+   "titel": "Nieuwe tips en een patch 🔧",
+   "tekst": "7 nieuwe tips (geld, auto's, taxi's en besturing), 1 easter egg en 1 weetje over de patch op Xbox erbij.",
+   "datum": "2026-11-19T19:00"
   }
  ]
 }
